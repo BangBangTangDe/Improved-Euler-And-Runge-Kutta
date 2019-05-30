@@ -4,9 +4,17 @@ double dfx(double x,double y)
 {
 	return y - 2 * x / y;
 }
+//改进欧拉公式
 void Euler()
 {
 	double x0,x1, y0,y1, h, N,yp,yc;
+	/*
+	x0,x1 旧值
+	y0y1 新值
+	h 步长
+	N 步数
+	yp yc 平均化的中间值
+	*/
 	int n = 1;
 	cout << "输入初始的 x0  y0  h  N" << endl;
 	cin >> x0 >> y0 >> h >> N;
@@ -29,9 +37,17 @@ void Euler()
 		}
 	}
 }
+//龙格*库卡公式
 void Longe_kutta()
 {
 	double x0, x1, y0, y1, h, N, K1,K2,K3,K4;
+	/*
+	x0,x1 旧值
+	y0y1 新值
+	h 步长
+	N 步数
+	k1 k2 k3 k4 平均化的中间值
+	*/
 	int n = 1;
 	cout << "输入初始的 x0  y0  h  N" << endl;
 	cin >> x0 >> y0 >> h >> N;
